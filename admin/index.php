@@ -1,0 +1,9 @@
+<?php 
+    session_start();
+    if(isset($_SESSION['nombre'])){
+        header('Location:panel-de-control.php');
+        exit();
+    }else{
+        header('Location:iniciar-sesion.php');
+    }
+?>
