@@ -1,0 +1,625 @@
+@font-face{
+    font-family: 'AZ-TIKI';
+    src:url("../fonts/AZ\ Tiki\ W90\ Regular.ttf");
+    font-family: 'Tiki';
+    src:url("../fonts/Tiki\ W00\ Regular.ttf");
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'opens-sans';
+    line-height: 1;
+}
+/*general*/
+h1,h2,h3{
+    font-family: 'Tiki';
+}
+h1{
+    font-size: 2.2em;
+}
+h2{
+    font-size: 1.8em;
+}
+h3{
+    font-size: 1.6em;
+}
+h4{
+    font-size: 1.4em;
+}
+p{
+    font-size: 18px;
+    font-family: 'opens-sans';
+}
+img{
+    width: 100%;
+}
+.contenedor{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px){
+    .contenedor{
+        width: 95%;
+    }
+}
+.manchaInvertida{
+    background-image: url("../img/manchaInvertida.png");
+    height: 50px;
+}
+.mancha{
+    background-image: url("../img/mancha1.png");
+    height: 50px;
+}
+.amarillo{
+    background-color: #e1c313;
+}
+.texto{
+    padding: 20px;
+    text-align: center;
+    line-height: 30px;
+}
+@media (min-width: 768px){
+    .texto{
+        width: 80%;
+    }
+}
+.texto h2.sombra-blanca{
+    background: url("../img/sombratext.png") no-repeat center;
+}
+.texto h2.sombra-amarilla{
+    background: url("../img/sombratextAmarilla.png") no-repeat center;
+}
+/*barra*/
+#barra{
+    background-color: #111;
+    height: 70px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+#barra .menu{
+    display: none;
+}
+@media (min-width: 768px){
+    #barra .menu{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}
+.logo{
+    width: 110px;
+}
+.menu-celular .barra-celular{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (min-width: 768px){
+    .menu-celular .barra-celular{
+        display: none;
+    }
+}
+.barra-celular #menu-logo{
+    width: 60px;
+}
+.barra-celular #menu-logo:hover{
+    cursor: pointer;
+}
+#menu-logo span{
+    display: block;
+    height: 8px;
+    margin: 6px;
+    background-color: #ffffff;
+}
+.menu-celular #opciones-menu{
+    background-color: rgb(43, 43, 43);
+    display: none;
+}
+#opciones-menu.activo{
+    display: block;
+}
+#opciones-menu a{
+    display: block;
+    text-align: center;
+}
+
+
+
+
+.navegacion{
+    background-image: url(".././img/nuevoheadnav.png");
+    height: 50px;
+}
+
+.navegacion-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navegacion-nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+ul > li{
+    margin: 15px;
+}
+li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.hov:hover,
+.hov.active{
+    border: 1px solid;
+    border-color: #fff;
+    transition: .5s ease-in-out;
+}
+.hov{
+    border: 1px solid;
+    border-color: #111;
+    padding: 10px;
+    font-family: 'Tiki';
+}
+/*carta*/
+#carta{
+    padding: 30px 0;
+}
+#carta .contenido-carta{
+    text-align: center;
+    line-height: 30px;
+}
+.contenido-carta h2{
+    font-size: 3em;
+}
+.contenido-carta h3{
+    border: solid ;
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    font-size: 1.5em;
+    min-width: 20%;
+    margin: 0 auto;
+}
+@media (min-width: 768px){
+    .contenido-carta h3{
+        max-width: 300px;
+    }
+}
+#carta .cartas-sep{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+@media (min-width: 768px){
+    #carta .cartas-sep{
+        flex-direction: row;
+    }
+}
+.cartas-sep .restaurant,
+.cartas-sep .bar{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+@media (min-width: 768px){
+    .cartas-sep .restaurant,
+    .cartas-sep .bar{
+        width: 50%;
+    }
+}
+.cartas-sep .restaurant{
+    /* background: linear-gradient(to bottom, 
+    rgba(0,0,0,.2),
+    rgba(0,0,0,.2)), url(../img/cartaTikiRest.jpg); */
+    background-image: url("../img/cartaTikiRest.jpg");
+    background-position: center;
+}
+@media (min-width: 768px){
+    .cartas-sep .restaurant{
+        background-position: -200px center;
+    }
+}
+.cartas-sep .bar{
+    /* background: linear-gradient(to bottom, 
+    rgba(0,0,0,.2),
+    rgba(0,0,0,.2)), url(../img/tragosTiki.jpg); */
+    background-image: url("../img/tragosTiki.jpg");
+    background-position: center;
+}
+@media (min-width: 768px){
+    .cartas-sep .bar{
+        background-position: 200px center;
+    }
+}
+.restaurant h3, .bar h3{
+    font-size: 5em;
+    color: #fff;
+}
+.restaurant a, .bar a{
+    color: #fff;
+    font-size: 1.5em;
+    padding: 10px;
+    border: 5px solid;
+}
+.restaurant a:hover, .bar a:hover{
+    background-color: #fff;
+    color: #e1c313;
+}
+/* HISTORIA */
+#historia{
+    padding: 30px 0;
+}
+#historia .contenido-historia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px){
+    #historia .contenido-historia{
+        flex-direction: row;
+    }
+}
+/*MISION Y VISION*/
+#mision-vision{
+    padding: 10px 0;
+}
+#mision-vision .contenido-mision-vision{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    #mision-vision .contenido-mision-vision{
+        flex-direction: row;
+    }
+}
+/*ACERCA DE*/
+.contenido-acerda-de{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px){
+    .contenido-acerda-de{
+        flex-direction: row;
+    }
+}
+/* CONTACTANOS */
+#contacto{
+    padding: 50px 0 30px 0;
+}
+#contacto .contenido-contacto{
+    text-align: center;
+}
+.contenido-contacto > form{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+@media (min-width: 768px){
+    .contenido-contacto > form{
+        display: block;
+    }
+}
+form .formulario{
+    display: flex;
+    flex-direction: column;
+}
+label, 
+input, 
+textarea{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+form input,
+form textarea{
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+}
+form textarea{
+    resize: none;
+}
+.btn{
+    display: block;
+    padding: 10px 30px;
+    border: 2px solid;
+}
+.btn,
+input[type='button'],
+input[type='submit']{
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(221, 221, 221);
+}
+/*FOOTER*/
+.site-footer{
+    background-color: #353535;
+    padding: 20px 0 0 0;
+}
+.footer{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+@media (min-width: 768px){
+    .footer{
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.footer h2{
+    margin-bottom: 20px;
+}
+.footer > div{
+    color: #fff;
+    font-size: 12px;
+}
+.footer > div h3{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.footer-info p{
+    margin-bottom: 10px;
+}
+.footer-info i{
+    font-size: 20px;
+}
+.social-media{
+    margin-top: 30px;
+}
+@media (min-width: 768px){
+.social-media{
+    margin-top: 0;
+}
+}
+.social-media a{
+    margin-right: 20px;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+}
+.social-media a:last-child{
+    margin-right: 0;
+}
+.copy{
+    background-color: #2e2e2e;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*anteriores*/
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+.banner .imgBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.banner .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 3s;
+    background-position: center;
+}
+.banner .imgBox img.activo{
+    opacity: 1;
+}
+.controles{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-5%);
+    width: 110%;
+    display: flex;
+    justify-content: space-between;
+}
+.controles li{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.controles li:hover{
+    background: #fe3b;
+}
+.controles li:before{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #111;
+    border-bottom: 3px solid #111;
+}
+.controles li:nth-child(2):before{
+    transform: rotate(225deg);
+}
+.pasarela{
+    margin: 50px auto auto auto;
+    width: 70%;
+}
+.contenidoBox{
+    position: absolute;
+    max-width: 700px;
+    bottom: 40%;
+    left: 16%;
+}
+.contenidoBox div{
+    display: none;
+    text-align: center;
+}
+.contenidoBox div.activo{
+    display: block;
+    padding: 30px;
+    background: rgba(37, 139, 71, 0.8);
+}
+.contenidoBox div h2{
+    color: #fff;
+    font-size: 3em;
+}
+.contenidoBox div p{
+    color: #111;
+    font-size: 1.1em;
+}
+.fondo{
+    background: url("../img/comi-tiki.jpg");
+    height: 800px;
+}
+/*carta restaurant*/
+.plantarde{
+    padding-top: 20px;
+    text-align: center;
+}
+.wrap{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+}
+
+@media (min-width: 768px) {
+    .wrap{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 1020px) {
+    .wrap{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/*PEDIDO-RESERVA*/
+.pedido-reserva{
+    background-color: #e1c313;
+    padding: 40px 0;
+}
+.pedido-reserva h1{
+    text-align: center;
+}
+.seccion{
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+}
+.seccion-form{
+    margin-top: 20px;
+}
+@media (min-width: 768px) {
+    .div-form{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+.campo-form{
+    margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+    .campo-form{
+        flex-basis: 50%;
+    }
+}
+.campo label,
+.campo input,
+.campo-form label,
+.campo-form input{
+    display: block;
+    width: 100%;
+}
+.campo-form label{
+    margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+    .campo label,
+    .campo input{
+        display: inline-block;
+        width: max-content;
+    }
+    .campo-centro{
+        text-align: center;
+    }
+}
+@media (min-width: 768px) {
+    input.btn{
+        width: auto;
+    }
+    input.btn-centro{
+        margin: 0 auto;
+    }
+}
+.seccion-form table{
+    width: 100%;
+}
+.seccion-form table .oculto{
+    display: none;
+}
+@media (min-width: 768px) {
+    .seccion-form table .oculto{
+        display: table-cell;
+        max-width: 250px;
+    }
+}
+table input[type='number']{
+    width: 50px;
+}
+/*resumen*/
+div.listado-productos{
+    padding: 10px 20px;
+    background-color: rgb(221, 221, 221);
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+p.monto-total{
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+/*Alert*/
+.swal2-styled.swal2-confirm {
+    background-color: #e1c313;
+}

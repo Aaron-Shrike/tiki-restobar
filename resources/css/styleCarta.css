@@ -1,0 +1,55 @@
+.wrap1{
+    width: 1100px;
+    margin:  auto;
+    display: flex;
+    justify-content: center;
+}
+.tarjeta-wrap{
+    perspective: 800;
+    -moz-perspective: 800;
+    -webkit-perspective: 800;
+}
+.tarjeta{
+    width: 300px;
+    height: 350px;
+    background: black;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .7s ease;
+    -webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+	box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+}
+.atras{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.adelante{
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+.adelante img{
+    height: 100%;
+    width: auto;
+}
+.atras{
+    transform: rotateY(180deg);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    text-align: center;
+    color: #fff;
+    font-family: "open sans";
+}
+.tarjeta-wrap:hover .tarjeta{
+    transform: rotateY(180deg);
+}
